@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; }
+
+body {
+  min-height: 100vh;
+  background-color: #674baf;
+  background-image: url("./../images/bg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px clamp(5px, 1vw, 20px) 100px;
+  gap: 40px;
+  position: relative; }
+  main .main__images {
+    display: grid;
+    grid-template-rows: 70px auto;
+    gap: 80px; }
+    main .main__images .images__illustration {
+      width: clamp(250px, 100%, 709px); }
+  main .main__content {
+    width: clamp(250px, 50%, 540px);
+    height: 100%;
+    padding: 0 40px;
+    color: white; }
+    main .main__content .content__details {
+      font-family: "Open Sans", sans-serif;
+      margin: 25px 0; }
+    main .main__content .content__submit {
+      width: 150px;
+      border: none;
+      background: white;
+      padding: 10px;
+      border-radius: 40px;
+      color: #674baf;
+      transition: 0.5s;
+      cursor: pointer; }
+      main .main__content .content__submit:hover {
+        background: #e882e8;
+        color: white; }
+    main .main__content .network {
+      width: 215px;
+      position: absolute;
+      bottom: 30px;
+      right: 100px;
+      display: flex;
+      gap: 20px; }
+      main .main__content .network .network__icon {
+        min-width: 50px;
+        min-height: 50px;
+        transition: 0.5s; }
+        main .main__content .network .network__icon:hover {
+          color: #e882e8;
+          filter: brightness(0.8) contrast(1.8); }
+
+@media screen and (max-width: 645px) {
+  body {
+    background-image: url("./../images/bg-mobile.svg"); }
+
+  .main {
+    flex-wrap: wrap; }
+    .main .main__images {
+      width: 100%; }
+    .main .main__content {
+      width: 100%;
+      text-align: center; }
+      .main .main__content .network {
+        left: 50%;
+        transform: translateX(-50%); } }
+.footer {
+  bottom: 20px;
+  position: absolute;
+  bottom: 5px; }
+  .footer .attribution {
+    font-size: 12px;
+    text-align: center;
+    color: white; }
+    .footer .attribution a {
+      color: #e882e8;
+      text-decoration: none;
+      font-weight: 600; }
+
+/*# sourceMappingURL=style.css.map */

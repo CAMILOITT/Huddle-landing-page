@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap')
+
+// ## Colors
+// ### Primary
+$Violet: hsl(257, 40%, 49%)
+$SoftMagenta: hsl(300, 69%, 71%)
+// ## Typography
+// ### Headings
+$fontFamilyPoppins: 'Poppins', sans-serif
+// ### Body
+$fontFamilyOpenSans: 'Open Sans', sans-serif
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: $fontFamilyPoppins
+body
+  min-height: 100vh
+  background-color: $Violet
+  background-image: url('./../images/bg-desktop.svg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+
+main
+  height: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 30px clamp(5px, 1vw, 20px) 100px
+  gap: 40px
+  position: relative
+  .main__images
+    display: grid
+    grid-template-rows: 70px auto
+    gap: 80px
+    .images__illustration
+      width: clamp(250px, 100%, 709px)
+
+  .main__content
+    width: clamp(250px, 50%, 540px)
+    height: 100%
+    padding: 0 40px
+    color: white
+    .content__details
+      font-family: $fontFamilyOpenSans
+      margin: 25px 0
+    .content__submit
+      width: 150px
+      border: none
+      background: white
+      padding: 10px
+      border-radius: 40px
+      color: $Violet
+      transition: .5s
+      cursor: pointer
+      &:hover
+        background: $SoftMagenta
+        color: white
+    .network
+      width: 215px
+      position: absolute
+      bottom: 30px
+      right: 100px
+      display: flex
+      gap: 20px
+      .network__icon
+        min-width: 50px
+        min-height: 50px
+        transition: .5s
+        &:hover
+          color: $SoftMagenta
+          filter: brightness(.8) contrast(1.8)
+
+@media screen and(max-width:645px)
+  body
+    background-image: url('./../images/bg-mobile.svg')
+  .main
+    flex-wrap: wrap
+    .main__images
+      width: 100%
+    .main__content
+      width: 100%
+      text-align: center
+      .network
+        left: 50%
+        transform: translateX(-50%)
+.footer
+  bottom: 20px
+  position: absolute
+  bottom: 5px
+  .attribution
+    font-size: 12px
+    text-align: center
+    color: white
+    a
+      color: $SoftMagenta
+      text-decoration: none
+      font-weight: 600
